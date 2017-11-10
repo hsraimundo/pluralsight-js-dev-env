@@ -1,0 +1,23 @@
+# test against this version of node
+environment:
+  matrix:
+  # node.js
+  - nodejs_version: "8"
+
+# install scripts
+install:
+  #get the latest stable version of node
+  - ps: Install-Product node $env:nodejs_version
+  #install modules
+  - npm install
+
+# post-install scripts
+test_script:
+  #output for debug
+  - node --version
+  - npm --version
+  #run tests
+  - npm test
+
+#don-t actually build
+build:off
