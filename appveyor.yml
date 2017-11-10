@@ -20,4 +20,4 @@ test_script:
   - npm test
 
 #don-t actually build
-build:off
+build: off
