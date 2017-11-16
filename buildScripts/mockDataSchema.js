@@ -23,7 +23,7 @@ export const schema = {
             },
             "email": {
                 "type": 'string',
-                "faker": "internet.email"
+              "faker": "internet.email"
             }
           },
           "required": ["id", "firstName", "lastName", "email"]
